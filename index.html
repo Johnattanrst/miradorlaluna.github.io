@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mirador La Luna | Menú</title>
+  <meta name="description" content="Menú digital móvil de Mirador La Luna, Bello, Antioquia." />
+  <style>
+    :root{
+      --bg:#0f0f10;
+      --panel:#18181b;
+      --card:#202024;
+      --text:#f5efe7;
+      --muted:#c7b9aa;
+      --accent:#c89b4b;
+      --line:rgba(255,255,255,.08);
+      --shadow:0 12px 28px rgba(0,0,0,.32);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(200,155,75,.12), transparent 32%),
+        linear-gradient(180deg, #111 0%, #09090a 100%);
+      color:var(--text);
+    }
+
+    .wrap{
+      width:min(100%, 760px);
+      margin:0 auto;
+      padding:12px 12px 34px;
+    }
+
+    .hero{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015));
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:16px 14px;
+      box-shadow:var(--shadow);
+      text-align:center;
+      margin-bottom:10px;
+    }
+
+    h1{
+      margin:0;
+      font-size:1.5rem;
+      letter-spacing:.08em;
+      line-height:1.2;
+    }
+
+    .sub{
+      margin-top:6px;
+      color:var(--muted);
+      font-size:.92rem;
+      line-height:1.45;
+    }
+
+    .sticky-nav{
+      position:sticky;
+      top:0;
+      z-index:20;
+      padding:10px 0 8px;
+      margin:0 -12px 8px;
+      background:linear-gradient(180deg, rgba(9,9,10,.97), rgba(9,9,10,.82));
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav-scroll{
+      display:flex;
+      gap:8px;
+      overflow:auto;
+      padding:0 12px 2px;
+      scrollbar-width:none;
+    }
+    .nav-scroll::-webkit-scrollbar{display:none}
+
+    .nav-chip{
+      flex:0 0 auto;
+      text-decoration:none;
+      color:var(--text);
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      padding:8px 11px;
+      border-radius:999px;
+      font-size:.82rem;
+      white-space:nowrap;
+    }
+
+    .section{
+      margin-top:10px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      background:rgba(255,255,255,.02);
+      box-shadow:var(--shadow);
+    }
+
+    details{
+      border-top:1px solid var(--line);
+    }
+
+    details:first-of-type{
+      border-top:none;
+    }
+
+    summary{
+      list-style:none;
+      cursor:pointer;
+      padding:14px 14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      user-select:none;
+    }
+    summary::-webkit-details-marker{display:none}
+
+    .title{
+      margin:0;
+      font-size:.95rem;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#f0ddbc;
+    }
+
+    .chev{
+      color:var(--accent);
+      font-size:1.1rem;
+      flex:0 0 auto;
+    }
+
+    .content{
+      padding:10px 12px 12px;
+      background:rgba(255,255,255,.01);
+    }
+
+    .item{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+      padding:11px 2px;
+      border-bottom:1px dashed rgba(255,255,255,.08);
+    }
+
+    .item:last-child{
+      border-bottom:none;
+    }
+
+    .name{
+      margin:0;
+      font-size:.98rem;
+      line-height:1.35;
+      font-weight:700;
+      flex:1;
+    }
+
+    .price{
+      white-space:nowrap;
+      font-weight:700;
+      color:#ffd28a;
+      font-size:.98rem;
+      margin-left:10px;
+    }
+
+    .foot{
+      margin-top:16px;
+      text-align:center;
+      color:var(--muted);
+      font-size:.88rem;
+      line-height:1.5;
+    }
+
+    .small{
+      margin-top:10px;
+      text-align:center;
+      color:#b9ab98;
+      font-size:.84rem;
+    }
+
+    @media (max-width:420px){
+      .wrap{padding:10px 10px 30px}
+      .hero{border-radius:18px}
+      .item{padding:10px 0}
+      .name{font-size:.94rem}
+      .price{font-size:.95rem}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>MIRADOR LA LUNA</h1>
+      <div class="sub">
+        Bello, Antioquia · Menú digital
+      </div>
+    </section>
+
+    <div class="sticky-nav">
+      <div class="nav-scroll">
+        <a class="nav-chip" href="#comida-rapida">Comida rápida</a>
+        <a class="nav-chip" href="#entradas">Entradas</a>
+        <a class="nav-chip" href="#picadas">Picadas</a>
+        <a class="nav-chip" href="#platos-fuertes">Platos fuertes</a>
+        <a class="nav-chip" href="#bebidas">Bebidas</a>
+        <a class="nav-chip" href="#helados">Helados</a>
+      </div>
+    </div>
+
+    <section id="menu"></section>
+
+    <div class="foot">
+      Versión 1.0.0
+    </div>
+    <div class="small">Mirador La Luna · Bello, Antioquia</div>
+  </main>
+
+  <script>
+    const menuData = [
+      {
+        id: "comida-rapida",
+        category: "Comida rápida",
+        items: [
+          ["Chorizo", 22000],
+          ["Chuzo de pollo", 22000],
+          ["Combo (chorizo y chuzo)", 35000],
+          ["Papanugges", 9000],
+          ["Hamburguesa artesanal", 28000],
+          ["Hamburguesa mixta", 28000],
+          ["Hamburguesa de pollo", 28000],
+          ["Salchipapa", 14000]
+        ]
+      },
+      {
+        id: "entradas",
+        category: "Entradas",
+        items: [
+          ["Dedos de queso", 15000],
+          ["Camarones apanados", 20000]
+        ]
+      },
+      {
+        id: "picadas",
+        category: "Picadas",
+        items: [
+          ["Picada ahumada personal", 35000],
+          ["Picada ahumada mediana", 52000],
+          ["Picada ahumada familiar", 90000],
+          ["Picada de la casa persona res", 19000],
+          ["Picada de la casa persona pollo", 18000],
+          ["Picada de la casa mixta", 31000],
+          ["Picada de la casa familiar", 66000]
+        ]
+      },
+      {
+        id: "platos-fuertes",
+        category: "Platos fuertes",
+        items: [
+          ["Patacón res", 20000],
+          ["Patacón pollo", 20000],
+          ["Bandeja res", 25000],
+          ["Bandeja pollo", 25000],
+          ["Bandeja cerdo", 25000],
+          ["Bandeja chicharrón", 25000],
+          ["Bandeja filet tilapia", 25000],
+          ["Bandeja tilapia entera", 30000],
+          ["Cazuela", 28000],
+          ["Sancocho res o costilla", 25000],
+          ["Mondongo", 25000]
+        ]
+      },
+      {
+        id: "bebidas",
+        category: "Bebidas",
+        items: [
+          ["Malteada (sabor de helado, salsa y chantilly)", 15000],
+          ["Jugo natural en agua", 8000],
+          ["Jugo natural en agua", 10000],
+          ["Michelada con toppings", 15000],
+          ["Michelada sencilla", 12000],
+          ["Michelada sencilla de soda", 10000],
+          ["Michelada con toppings de soda", 13000]
+        ]
+      },
+      {
+        id: "helados",
+        category: "Helados",
+        items: [
+          ["Cono", 3500],
+          ["Cono 2 bolas", 6500],
+          ["Concha 1 bola", 5000],
+          ["Concha 2 bolas", 8000],
+          ["Cucurucho 1 bola", 5000],
+          ["Cucurucho 2 bolas", 8000],
+          ["Concha 1 bola con queso", 8000],
+          ["Concha 1 bola combinada (queso + chantilly)", 10000],
+          ["Vaso 1 bola", 3500],
+          ["Vaso 2 bolas", 6500],
+          ["Vaso 3 bolas", 9000],
+          ["Vaso combinado 1 bola + queso + chantilly", 9500],
+          ["Vaso combinado 2 bolas + queso + chantilly", 11500],
+          ["Salpicón", 8000],
+          ["Salpicón con helado", 10000],
+          ["Salpicón con helado + queso + chantilly", 14000],
+          ["Copa duracrispi (2 bolas de helado, durazno, crispi, queso y chantilly)", 18000],
+          ["Copa brevasdu (2 bolas de helado, brevas, durazno, queso y chantilly)", 20000],
+          ["Copa frutos amarillos (2 bolas de helado, mango, durazno, queso y chantilly)", 20000]
+        ]
+      }
+    ];
+
+    const menuEl = document.getElementById("menu");
+    const formatPrice = n => new Intl.NumberFormat("es-CO").format(n);
+
+    menuData.forEach((section, index) => {
+      const details = document.createElement("details");
+      details.id = section.id;
+      details.open = index < 2; // open first two by default
+
+      details.innerHTML = `
+        <summary>
+          <h2 class="title">${section.category}</h2>
+          <span class="chev">▾</span>
+        </summary>
+        <div class="content"></div>
+      `;
+
+      const content = details.querySelector(".content");
+
+      section.items.forEach(([name, price]) => {
+        const row = document.createElement("div");
+        row.className = "item";
+        row.innerHTML = `
+          <p class="name">${name}</p>
+          <div class="price">$${formatPrice(price)}</div>
+        `;
+        content.appendChild(row);
+      });
+
+      menuEl.appendChild(details);
+    });
+  </script>
+</body>
+</html>
