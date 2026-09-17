@@ -326,7 +326,7 @@
     menuData.forEach((section, index) => {
       const details = document.createElement("details");
       details.id = section.id;
-      details.open = index < 2; // open first two by default
+      details.open = true; // all open by default || old -> //index < 2; // open first two by default
 
       details.innerHTML = `
         <summary>
